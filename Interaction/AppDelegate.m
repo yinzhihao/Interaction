@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import <RNCachingURLProtocol/RNCachingURLProtocol.h>
 
 @interface AppDelegate ()
 
@@ -24,6 +25,8 @@
     
     ViewController *vc = [[ViewController alloc] init];
     self.window.rootViewController = vc;
+    
+    [NSURLProtocol registerClass:[RNCachingURLProtocol class]];
     
     return YES;
 }

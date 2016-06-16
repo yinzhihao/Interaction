@@ -22,17 +22,20 @@ PODS:
     - AFNetworking/NSURLSession
   - Cordova (3.9.1)
   - RNCachingURLProtocol (0.0.2)
+  - WebViewJavascriptBridge (5.0.5)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.6)
   - Cordova
   - RNCachingURLProtocol
+  - WebViewJavascriptBridge
 
 SPEC CHECKSUMS:
   AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
   Cordova: f8142a2cb0072f5225e865fc5660f174cc0674a5
   RNCachingURLProtocol: 3240c31b468c58eb6363d0ffdc1e0acc0b98ca76
+  WebViewJavascriptBridge: a4d502315f1b8d9a51cd6a9174147ed567ec3bc5
 
-PODFILE CHECKSUM: d2dea42b242b893ca7a6e985148df6fe37427930
+PODFILE CHECKSUM: acc9f4f74d2993b75c0ca4e881a6afed39a52333
 
 COCOAPODS: 1.0.0

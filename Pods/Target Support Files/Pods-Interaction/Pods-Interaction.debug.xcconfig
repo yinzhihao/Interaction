@@ -1,8 +1,8 @@
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AFNetworking" "${PODS_ROOT}/Headers/Public/Cordova" "${PODS_ROOT}/Headers/Public/RNCachingURLProtocol"
-LIBRARY_SEARCH_PATHS = $(inherited) "$PODS_CONFIGURATION_BUILD_DIR/AFNetworking" "$PODS_CONFIGURATION_BUILD_DIR/Cordova" "$PODS_CONFIGURATION_BUILD_DIR/RNCachingURLProtocol"
-OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/AFNetworking" -isystem "${PODS_ROOT}/Headers/Public/Cordova" -isystem "${PODS_ROOT}/Headers/Public/RNCachingURLProtocol"
-OTHER_LDFLAGS = $(inherited) -ObjC -l"AFNetworking" -l"Cordova" -l"RNCachingURLProtocol" -framework "AVFoundation" -framework "AssetsLibrary" -framework "CoreGraphics" -framework "CoreLocation" -framework "MobileCoreServices" -framework "Security" -framework "SystemConfiguration"
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AFNetworking" "${PODS_ROOT}/Headers/Public/Cordova" "${PODS_ROOT}/Headers/Public/RNCachingURLProtocol" "${PODS_ROOT}/Headers/Public/WebViewJavascriptBridge"
+LIBRARY_SEARCH_PATHS = $(inherited) "$PODS_CONFIGURATION_BUILD_DIR/AFNetworking" "$PODS_CONFIGURATION_BUILD_DIR/Cordova" "$PODS_CONFIGURATION_BUILD_DIR/RNCachingURLProtocol" "$PODS_CONFIGURATION_BUILD_DIR/WebViewJavascriptBridge"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/AFNetworking" -isystem "${PODS_ROOT}/Headers/Public/Cordova" -isystem "${PODS_ROOT}/Headers/Public/RNCachingURLProtocol" -isystem "${PODS_ROOT}/Headers/Public/WebViewJavascriptBridge"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"AFNetworking" -l"Cordova" -l"RNCachingURLProtocol" -l"WebViewJavascriptBridge" -framework "AVFoundation" -framework "AssetsLibrary" -framework "CoreGraphics" -framework "CoreLocation" -framework "MobileCoreServices" -framework "Security" -framework "SystemConfiguration" -framework "UIKit"
 PODS_BUILD_DIR = $BUILD_DIR
 PODS_CONFIGURATION_BUILD_DIR = $PODS_BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_ROOT = ${SRCROOT}/Pods

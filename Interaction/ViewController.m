@@ -7,9 +7,12 @@
 //
 
 #import "ViewController.h"
+#import <WebViewJavascriptBridge/WebViewJavascriptBridge.h>
 
 @interface ViewController ()
-
+{
+    WebViewJavascriptBridge *_bridge;
+}
 @end
 
 @implementation ViewController
@@ -33,6 +36,10 @@
     [self.view addSubview:self.webView];
     
     [self initWebView];
+    
+    //iOS原生App与H5页面交互笔记
+    //http://www.jianshu.com/p/4ed3e5ed99c6
+    [self initWebViewJsBridge];
 }
 
 #pragma mark - 交互1：将HTML显示在APP上
@@ -44,6 +51,16 @@
     NSURLRequest *urlRequest = [[NSURLRequest alloc] initWithURL:url];
     [self.webView loadRequest:urlRequest];
     
+}
+//初始化WebViewJavascriptBridge方法
+- (void)initWebViewJsBridge
+{
+    _bridge = [WebViewJavascriptBridge bridgeForWebView:self.webView];
+    [_bridge setWebViewDelegate:self];
+    
+    [_bridge registerHandler:@"原生与JS约定接口名" handler:^(id data, WVJBResponseCallback responseCallback) {
+        responseCallback(@"postInfomationToJS");
+    }];
 }
 
 #pragma mark-delegate
